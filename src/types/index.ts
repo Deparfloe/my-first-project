@@ -184,10 +184,15 @@ export interface ApiResponse<T> {
 export interface PaginatedResponse<T> {
   success: boolean
   data: T[]
-  total: number
-  page: number
-  pageSize: number
-  hasMore: boolean
+  total?: number
+  page?: number
+  pageSize?: number
+  hasMore?: boolean
+  pagination?: {
+    total: number
+    limit: number
+    offset: number
+  }
 }
 
 // ===== SEARCH TYPES =====

@@ -49,20 +49,12 @@ export async function sendOTP(email: string): Promise<ApiResponse<{ message: str
       }
     }
 
-    // User doesn't exist: Create new user
-    const { data, error } = await supabase.auth.signUpWithPassword({
-      email: email.toLowerCase(),
-      password: Math.random().toString(36).slice(-12), // Temporary password
-    })
-
-    if (error && error.message !== 'User already registered') throw error
-
-    // Create user record in DB
-    const { error: insertError } = await supabase.from('users').insert({
+    // Create user record in DB with OTP flow
+    const { data: userData, error: insertError } = await supabase.from('users').insert({
       email: email.toLowerCase(),
       role: 'normal',
       is_email_verified: false,
-    })
+    }).select().single()
 
     if (insertError) throw insertError
 

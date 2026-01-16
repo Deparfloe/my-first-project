@@ -86,10 +86,10 @@ async function BusinessGrid({
       </div>
 
       {/* Pagination */}
-      {total > 20 && (
+      {(total || 0) > 20 && (
         <div style={{ textAlign: 'center', marginTop: 'var(--space-12)' }}>
           <p style={{ color: 'var(--color-neutral-600)', marginBottom: 'var(--space-4)' }}>
-            Seite {page} von {Math.ceil(total / 20)} ({total} Unternehmen gefunden)
+            Seite {page} von {Math.ceil((total || 0) / 20)} ({total || 0} Unternehmen gefunden)
           </p>
           {hasMore && (
             <Button variant="outline">Weitere laden</Button>

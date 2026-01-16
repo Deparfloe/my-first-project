@@ -15,7 +15,13 @@ export const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 // ===== PAYMENT CONFIG =====
 export const STRIPE_PUBLIC_KEY = process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY
 export const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY
+export const STRIPE_WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET
 export const PAYPAL_CLIENT_ID = process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID
+
+export const STRIPE_CONFIG = {
+  publishableKey: process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY,
+  priceId: process.env.NEXT_PUBLIC_STRIPE_PREMIUM_PRICE_ID,
+}
 
 export const PREMIUM_PRICE = 49 // EUR per month
 export const PREMIUM_STRIPE_PRICE_ID = process.env.NEXT_PUBLIC_STRIPE_PREMIUM_PRICE_ID

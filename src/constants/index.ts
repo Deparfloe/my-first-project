@@ -72,27 +72,40 @@ export const DATE_FORMATS = {
 } as const
 
 // ===== SUBSCRIPTION BENEFITS =====
-export const SUBSCRIPTION_BENEFITS = {
-  basic: [
-    'Kostenfreies Profil',
-    'Bis zu 3 Events',
-    '1 Bild/Logo',
-    'Postfach-System',
-    'Grunddaten eintragen',
-  ],
-  premium: [
-    'Alles von Basic +',
-    'Unbegrenzte Events',
-    'Google Maps Integration',
-    '10+ Foto-Galerie',
-    'Erweiterte Texte',
-    'Premium-Anfrageformular',
-    'SEO-Optimierung',
-    'Priorität in Suchergebnissen',
-    'Werbeslot-Buchung',
-    'Später: Analytics',
-  ],
-} as const
+export const SUBSCRIPTION_BENEFITS = [
+  {
+    title: 'Unbegrenzte Events',
+    description: 'Erstellen und verwalten Sie so viele Events wie Sie möchten',
+  },
+  {
+    title: 'Google Maps Integration',
+    description: 'Zeigen Sie Ihren Standort auf einer interaktiven Karte',
+  },
+  {
+    title: 'Foto-Galerie (bis zu 20 Bilder)',
+    description: 'Präsentieren Sie Ihr Unternehmen mit professionellen Fotos',
+  },
+  {
+    title: 'Erweiterte Beschreibung',
+    description: 'Nutzen Sie erweiterte Textformatierung für Ihre Profilbeschreibung',
+  },
+  {
+    title: 'Priority in Suchergebnissen',
+    description: 'Erscheinen Sie prominenter in den Suchergebnissen',
+  },
+  {
+    title: 'Werbeslot-Buchung',
+    description: 'Buchen Sie Werbeplätze auf der Website',
+  },
+  {
+    title: 'Erweiterte Analytics',
+    description: 'Sehen Sie, wie viele Menschen Ihr Profil besuchen',
+  },
+  {
+    title: 'Kontaktformular-Anpassung',
+    description: 'Passen Sie das Anfrageformular nach Ihren Bedürfnissen an',
+  },
+] as const
 
 // ===== ROLE-BASED FEATURES =====
 export const FEATURES_BY_ROLE = {

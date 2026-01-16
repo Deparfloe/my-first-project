@@ -112,7 +112,6 @@ export async function searchBusinessesByProblem(
     return {
       success: false,
       data: [],
-      error: getErrorMessage(error),
       total: 0,
       page: 1,
       pageSize: DEFAULT_PAGE_SIZE,
@@ -194,7 +193,6 @@ export async function getUpcomingEvents(
     return {
       success: false,
       data: [],
-      error: getErrorMessage(error),
       total: 0,
       page: 1,
       pageSize: 10,

@@ -95,10 +95,10 @@ async function EventsList({ page }: { page: number }) {
       </div>
 
       {/* Pagination */}
-      {total > pageSize && (
+      {(total || 0) > pageSize && (
         <div style={{ textAlign: 'center', marginTop: 'var(--space-12)' }}>
           <p style={{ color: 'var(--color-neutral-600)', marginBottom: 'var(--space-4)' }}>
-            Seite {page} von {Math.ceil(total / pageSize)}
+            Seite {page} von {Math.ceil((total || 0) / pageSize)}
           </p>
           <div style={{ display: 'flex', gap: 'var(--space-4)', justifyContent: 'center' }}>
             {page > 1 && (
